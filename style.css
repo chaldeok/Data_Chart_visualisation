@@ -3,16 +3,16 @@
     padding: 0;
 }
 .container {
-    height: 100vh;
-    width: 100vw;
+    /*height: 100vh;
+    width: 100vw;*/
     font-family: 'Oswald', sans-serif;
 }
-/*.dataBox {
-    display: flex;
-    justify-content: space-between;
-
-}*/
-.style {
-    width: 40vw;
-    height: 40vh;
+.dataBox {
+    height: 800px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.style-1 {
+    width: 400px;
+    height: 600px;
 }

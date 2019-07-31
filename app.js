@@ -46,8 +46,6 @@ window.onload = function () {
 		data: dataLow,
 		//options: options
 	});
-
-
 	const dataCanvasMed = document.getElementById('lineChartMed');
 	const dataMed = {
 		labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
@@ -94,8 +92,6 @@ window.onload = function () {
 		data: dataMed,
 		//options: options
 	});
-
-
 	const dataCanvasUp = document.getElementById('lineChartUp');
 	const dataUp = {
 		labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
@@ -140,6 +136,38 @@ window.onload = function () {
 	const lineChartDataUp = new Chart (dataCanvasUp, {
 		type: 'line',
 		data: dataUp,
+		//options: options
+	});
+	const dataCanvasBar = document.getElementById('barChart');
+	const dataBar = {
+		labels: ['Brazil', 'Russian Fed.', 'India', 'China', 'South Africa'],
+		datasets: [
+			{
+				label: 'lower',
+				data: [11.9, 6, 29, 7, 24],
+				backgroundColor: '#FFFF60',
+				borderWidth: 2,
+				borderColor: '#FFFF60'
+			},
+			{
+				label: 'median',
+				data: [13.2, 6.5, 32, 8, 28.8],
+				backgroundColor: '#FFC031',
+				borderWidth: 2,
+				borderColor: '#FFC031'
+			},
+			{
+				label: 'upper',
+				data: [14.7, 7, 35, 9.2, 33.9],
+				backgroundColor: '#DF8B00',
+				borderWidth: 2,
+				borderColor: '#DF8B00'
+			}
+		]
+	};
+	const barChartData = new Chart (dataCanvasBar, {
+		type: 'bar',
+		data: dataBar,
 		//options: options
 	});
 };
