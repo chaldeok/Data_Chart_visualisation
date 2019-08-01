@@ -1,6 +1,18 @@
 window.onload = function () {
 	Chart.defaults.scale.ticks.beginAtZero = true;
 	const dataCanvasLow = document.getElementById('lineChartLow');
+	const optionsLow = {
+		legend: {
+			position: 'top',
+		},
+		title: {
+			display: true,
+			position: 'top',
+			fontColor: '#666',
+			fontSize: 18,
+			text: '2010-2017 Low rate'
+		}
+	};
 	const dataLow = {
 		labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
 		datasets: [
@@ -44,9 +56,21 @@ window.onload = function () {
 	const lineChartDataLow = new Chart (dataCanvasLow, {
 		type: 'line',
 		data: dataLow,
-		//options: options
+		options: optionsLow
 	});
 	const dataCanvasMed = document.getElementById('lineChartMed');
+	const optionsMed = {
+		legend: {
+			position: 'top',
+		},
+		title: {
+			display: true,
+			position: 'top',
+			fontColor: '#666',
+			fontSize: 18,
+			text: '2010-2017 Median rate'
+		}
+	};
 	const dataMed = {
 		labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
 		datasets: [
@@ -87,18 +111,30 @@ window.onload = function () {
 			}
 		]
 	};
-	const lineChartDataMed = new Chart (dataCanvasMed, {
+	const lineChartDataMed = new Chart(dataCanvasMed, {
 		type: 'line',
 		data: dataMed,
-		//options: options
+		options: optionsMed
 	});
 	const dataCanvasUp = document.getElementById('lineChartUp');
+	const optionsUp = {
+		legend: {
+			position: 'top',
+		},
+		title: {
+			display: true,
+			position: 'top',
+			fontColor: '#666',
+			fontSize: 18,
+			text: '2010-2017 Upper rate'
+		}
+	};
 	const dataUp = {
 		labels: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
 		datasets: [
 			{
 				label: 'Brazil',
-				data: [17.2, 16.4, 15.8, 15.3, 14.9, 14.8, 15.8, 14,7],
+				data: [17.2, 16.4, 15.8, 15.3, 14.9, 14.8, 15.8, 14, 7],
 				backgroundColor: ['rgba(255, 99, 132, 0.2)'],
 				borderWidth: 2,
 				borderColor: 'grey',
@@ -129,16 +165,28 @@ window.onload = function () {
 				data: [42.1, 40.8, 39.8, 37.9, 36.4, 36.2, 34.6, 33.9],
 				backgroundColor: ['rgba(153, 102, 255, 0.2)'],
 				borderWidth: 2,
-				borderColor: 'red',
+				borderColor: 'red'
 			}
 		]
 	};
 	const lineChartDataUp = new Chart (dataCanvasUp, {
 		type: 'line',
 		data: dataUp,
-		//options: options
+		options: optionsUp
 	});
 	const dataCanvasBar = document.getElementById('barChart');
+	const optionsBar = {
+		legend: {
+			position: 'top',
+		},
+		title: {
+			display: true,
+			position: 'top',
+			fontColor: '#666',
+			fontSize: 18,
+			text: '2017 Low, Median, Upper rates'
+		}
+	};
 	const dataBar = {
 		labels: ['Brazil', 'Russian Fed.', 'India', 'China', 'South Africa'],
 		datasets: [
@@ -168,6 +216,6 @@ window.onload = function () {
 	const barChartData = new Chart (dataCanvasBar, {
 		type: 'bar',
 		data: dataBar,
-		//options: options
+		options: optionsBar
 	});
 };
